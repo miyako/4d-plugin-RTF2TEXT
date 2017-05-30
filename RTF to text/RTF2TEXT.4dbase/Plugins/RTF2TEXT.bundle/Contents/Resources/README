@@ -1,0 +1,48 @@
+==========================================================================
+                           About RTFCONV.DLL
+==========================================================================
+
+
+
+1. Contents of this Archive
+  This Archive contains the following files:
+
+        h\
+           rtfconv.h     The header file for RTFCONV.DLL
+        bin32\
+           rtfconv.dll   (x86)
+           rtfconv.lib   The import library for compiling with VC++ (x86)
+           mbctbl.dll    called by rtfconv.dll (x86)
+           sbctbl.dll    called by rtfconv.dll (x86)
+           cnstbl.dll    called by rtfconv.dll (x86)
+        bin64\
+           rtfconv.dll   (x64)
+           rtfconv.lib   The import library for compiling with VC++ (x64)
+           mbctbl.dll    called by rtfconv.dll (x64)
+           sbctbl.dll    called by rtfconv.dll (x64)
+           cnstbl.dll    called by rtfconv.dll (x64)
+        doc_english\
+           readme.txt    This file. (English)
+           api.html      Description of RTFCONV.DLL API. (English)
+        doc_japanese\
+           readme.txt    Readme file. (Japanese)
+           api.html      Description of RTFCONV.DLL API. (Japanese)
+
+  For details about rtfconv.dll, read api.html.
+
+
+
+2. Required OS
+  Windows 95/98/Me, Windows NT 4.0/2000/XP/Vista (32bit)
+
+
+
+3. License
+
+  This is free software. You can use it on any computer, including a computer in a commercial organization. You don't need to register or pay for it. You can redistribute the archive or any file extracted from it, as long as you do not modify it.
+  I hope that this software will be useful, but without any warranty.
+
+
+
+                                                     Harigaya Soichi
+

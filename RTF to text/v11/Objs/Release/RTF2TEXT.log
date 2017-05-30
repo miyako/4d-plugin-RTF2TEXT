@@ -1,0 +1,244 @@
+﻿  ARRAY_BOOLEAN.cpp
+  ARRAY_DATE.cpp
+  ARRAY_INTEGER.cpp
+  ARRAY_LONGINT.cpp
+  ARRAY_REAL.cpp
+  ARRAY_TEXT.cpp
+  C_BLOB.cpp
+  C_DATE.cpp
+  C_INTEGER.cpp
+  C_LONGINT.cpp
+  C_PICTURE.cpp
+  C_POINTER.cpp
+  C_REAL.cpp
+  C_TEXT.cpp
+  C_TIME.cpp
+  4DPlugin.cpp
+..\4DPlugin.cpp(86): warning C4244: '初期化中': 'intptr_t' から 'int' への変換です。データが失われる可能性があります。
+  4DPluginAPI.c
+4D Plugin API\4DPluginAPI.c(1478): warning C4311: '型キャスト': ポインターを 'PA_Pointer' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(1478): warning C4302: '型キャスト': 'PA_Pointer' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(2042): warning C4311: '型キャスト': ポインターを 'PA_Pointer' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(2042): warning C4302: '型キャスト': 'PA_Pointer' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(2075): warning C4311: '型キャスト': ポインターを 'PA_Pointer' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(2075): warning C4302: '型キャスト': 'PA_Pointer' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(2337): warning C4312: '型キャスト': 'long' からより大きいサイズの 'PA_PluginProperties *' へ変換します。
+4D Plugin API\4DPluginAPI.c(2345): warning C4312: '型キャスト': 'long' からより大きいサイズの 'PA_PluginProperties *' へ変換します。
+4D Plugin API\4DPluginAPI.c(2351): warning C4312: '型キャスト': 'long' からより大きいサイズの 'PA_PluginProperties *' へ変換します。
+4D Plugin API\4DPluginAPI.c(2370): warning C4312: '型キャスト': 'long' からより大きいサイズの 'PA_PluginProperties *' へ変換します。
+4D Plugin API\4DPluginAPI.c(2398): warning C4312: '型キャスト': 'long' からより大きいサイズの 'void *' へ変換します。
+4D Plugin API\4DPluginAPI.c(2540): warning C4312: '型キャスト': 'long' からより大きいサイズの 'PA_DragAndDropInfo *' へ変換します。
+4D Plugin API\4DPluginAPI.c(2565): warning C4312: '型キャスト': 'long' からより大きいサイズの 'PA_Rect *' へ変換します。
+4D Plugin API\4DPluginAPI.c(2584): warning C4311: '型キャスト': ポインターを 'PA_Rect *' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(2584): warning C4302: '型キャスト': 'PA_Rect *' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(2689): warning C4312: '型キャスト': 'long' からより大きいサイズの 'PA_DragAndDropInfo *' へ変換します。
+4D Plugin API\4DPluginAPI.c(2695): warning C4312: '型キャスト': 'long' からより大きいサイズの 'PA_DragContextRef' へ変換します。
+4D Plugin API\4DPluginAPI.c(3007): warning C4311: '型キャスト': ポインターを 'char *' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(3007): warning C4302: '型キャスト': 'char *' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(3027): warning C4311: '型キャスト': ポインターを 'void *' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(3027): warning C4302: '型キャスト': 'void *' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(4538): warning C4311: '型キャスト': ポインターを 'char *' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(4538): warning C4302: '型キャスト': 'char *' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(4539): warning C4311: '型キャスト': ポインターを 'char *' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(4539): warning C4302: '型キャスト': 'char *' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(4585): warning C4311: '型キャスト': ポインターを 'char *' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(4585): warning C4302: '型キャスト': 'char *' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(4586): warning C4311: '型キャスト': ポインターを 'char *' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(4586): warning C4302: '型キャスト': 'char *' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(4883): warning C4311: '型キャスト': ポインターを 'PA_Variable *' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(4883): warning C4302: '型キャスト': 'PA_Variable *' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(4922): warning C4311: '型キャスト': ポインターを 'PA_Handle' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(4922): warning C4302: '型キャスト': 'PA_Handle' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(4979): warning C4311: '型キャスト': ポインターを 'PA_Variable *' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(4979): warning C4302: '型キャスト': 'PA_Variable *' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(6446): warning C4311: '型キャスト': ポインターを 'PA_Handle' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(6446): warning C4302: '型キャスト': 'PA_Handle' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(6454): warning C4311: '型キャスト': ポインターを 'PA_WindowRef' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(6454): warning C4302: '型キャスト': 'PA_WindowRef' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(6551): warning C4311: '型キャスト': ポインターを 'PA_Rect *' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(6551): warning C4302: '型キャスト': 'PA_Rect *' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(6645): warning C4311: '型キャスト': ポインターを 'PA_Rect *' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(6645): warning C4302: '型キャスト': 'PA_Rect *' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(6968): warning C4311: '型キャスト': ポインターを 'PA_Unichar *' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(6968): warning C4302: '型キャスト': 'PA_Unichar *' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(6969): warning C4311: '型キャスト': ポインターを 'PA_Unichar *' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(6969): warning C4302: '型キャスト': 'PA_Unichar *' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(6970): warning C4311: '型キャスト': ポインターを 'PA_Unichar *' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(6970): warning C4302: '型キャスト': 'PA_Unichar *' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(6971): warning C4311: '型キャスト': ポインターを 'PA_Unichar *' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(6971): warning C4302: '型キャスト': 'PA_Unichar *' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7075): warning C4311: '型キャスト': ポインターを 'PA_Rect *' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7075): warning C4302: '型キャスト': 'PA_Rect *' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7094): warning C4311: '型キャスト': ポインターを 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7094): warning C4302: '型キャスト': 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7115): warning C4311: '型キャスト': ポインターを 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7115): warning C4302: '型キャスト': 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7125): warning C4311: '型キャスト': ポインターを 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7125): warning C4302: '型キャスト': 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7138): warning C4311: '型キャスト': ポインターを 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7138): warning C4302: '型キャスト': 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7151): warning C4311: '型キャスト': ポインターを 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7151): warning C4302: '型キャスト': 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7163): warning C4311: '型キャスト': ポインターを 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7163): warning C4302: '型キャスト': 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7176): warning C4311: '型キャスト': ポインターを 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7176): warning C4302: '型キャスト': 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7188): warning C4311: '型キャスト': ポインターを 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7188): warning C4302: '型キャスト': 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7201): warning C4311: '型キャスト': ポインターを 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7201): warning C4302: '型キャスト': 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7213): warning C4311: '型キャスト': ポインターを 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7213): warning C4302: '型キャスト': 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7226): warning C4311: '型キャスト': ポインターを 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7226): warning C4302: '型キャスト': 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7237): warning C4311: '型キャスト': ポインターを 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7237): warning C4302: '型キャスト': 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7251): warning C4311: '型キャスト': ポインターを 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7251): warning C4302: '型キャスト': 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7263): warning C4311: '型キャスト': ポインターを 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7263): warning C4302: '型キャスト': 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7277): warning C4311: '型キャスト': ポインターを 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7277): warning C4302: '型キャスト': 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7290): warning C4311: '型キャスト': ポインターを 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7290): warning C4302: '型キャスト': 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7291): warning C4311: '型キャスト': ポインターを 'void *' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7291): warning C4302: '型キャスト': 'void *' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7301): warning C4311: '型キャスト': ポインターを 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7301): warning C4302: '型キャスト': 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7315): warning C4311: '型キャスト': ポインターを 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7315): warning C4302: '型キャスト': 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7328): warning C4311: '型キャスト': ポインターを 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7328): warning C4302: '型キャスト': 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7341): warning C4311: '型キャスト': ポインターを 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7341): warning C4302: '型キャスト': 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7361): warning C4311: '型キャスト': ポインターを 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7361): warning C4302: '型キャスト': 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7362): warning C4311: '型キャスト': ポインターを 'PA_Rect *' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7362): warning C4302: '型キャスト': 'PA_Rect *' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7373): warning C4311: '型キャスト': ポインターを 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7373): warning C4302: '型キャスト': 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7386): warning C4311: '型キャスト': ポインターを 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7386): warning C4302: '型キャスト': 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7398): warning C4311: '型キャスト': ポインターを 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7398): warning C4302: '型キャスト': 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7413): warning C4311: '型キャスト': ポインターを 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7413): warning C4302: '型キャスト': 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7425): warning C4311: '型キャスト': ポインターを 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7425): warning C4302: '型キャスト': 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7435): warning C4311: '型キャスト': ポインターを 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7435): warning C4302: '型キャスト': 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7446): warning C4311: '型キャスト': ポインターを 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7446): warning C4302: '型キャスト': 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7459): warning C4311: '型キャスト': ポインターを 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7459): warning C4302: '型キャスト': 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7473): warning C4311: '型キャスト': ポインターを 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7473): warning C4302: '型キャスト': 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7493): warning C4311: '型キャスト': ポインターを 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7493): warning C4302: '型キャスト': 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7505): warning C4311: '型キャスト': ポインターを 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7505): warning C4302: '型キャスト': 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7516): warning C4311: '型キャスト': ポインターを 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7516): warning C4302: '型キャスト': 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7530): warning C4311: '型キャスト': ポインターを 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7530): warning C4302: '型キャスト': 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7548): warning C4311: '型キャスト': ポインターを 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7548): warning C4302: '型キャスト': 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7562): warning C4311: '型キャスト': ポインターを 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7562): warning C4302: '型キャスト': 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7591): warning C4311: '型キャスト': ポインターを 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7591): warning C4302: '型キャスト': 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7609): warning C4311: '型キャスト': ポインターを 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7609): warning C4302: '型キャスト': 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7620): warning C4311: '型キャスト': ポインターを 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7620): warning C4302: '型キャスト': 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7634): warning C4311: '型キャスト': ポインターを 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7634): warning C4302: '型キャスト': 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7647): warning C4311: '型キャスト': ポインターを 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7647): warning C4302: '型キャスト': 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7660): warning C4311: '型キャスト': ポインターを 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7660): warning C4302: '型キャスト': 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7673): warning C4311: '型キャスト': ポインターを 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7673): warning C4302: '型キャスト': 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7684): warning C4311: '型キャスト': ポインターを 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7684): warning C4302: '型キャスト': 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7695): warning C4311: '型キャスト': ポインターを 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7695): warning C4302: '型キャスト': 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7710): warning C4311: '型キャスト': ポインターを 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7710): warning C4302: '型キャスト': 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7723): warning C4311: '型キャスト': ポインターを 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7723): warning C4302: '型キャスト': 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7734): warning C4311: '型キャスト': ポインターを 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7734): warning C4302: '型キャスト': 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7747): warning C4311: '型キャスト': ポインターを 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7747): warning C4302: '型キャスト': 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7762): warning C4311: '型キャスト': ポインターを 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7762): warning C4302: '型キャスト': 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7775): warning C4311: '型キャスト': ポインターを 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7775): warning C4302: '型キャスト': 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7790): warning C4311: '型キャスト': ポインターを 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7790): warning C4302: '型キャスト': 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7791): warning C4311: '型キャスト': ポインターを 'void *' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7791): warning C4302: '型キャスト': 'void *' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7801): warning C4311: '型キャスト': ポインターを 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7801): warning C4302: '型キャスト': 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7812): warning C4311: '型キャスト': ポインターを 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7812): warning C4302: '型キャスト': 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7824): warning C4311: '型キャスト': ポインターを 'PA_WindowRef' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7824): warning C4302: '型キャスト': 'PA_WindowRef' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7835): warning C4311: '型キャスト': ポインターを 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7835): warning C4302: '型キャスト': 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7846): warning C4311: '型キャスト': ポインターを 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7846): warning C4302: '型キャスト': 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7859): warning C4311: '型キャスト': ポインターを 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7859): warning C4302: '型キャスト': 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7870): warning C4311: '型キャスト': ポインターを 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7870): warning C4302: '型キャスト': 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7883): warning C4311: '型キャスト': ポインターを 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7883): warning C4302: '型キャスト': 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7895): warning C4311: '型キャスト': ポインターを 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7895): warning C4302: '型キャスト': 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7907): warning C4311: '型キャスト': ポインターを 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7907): warning C4302: '型キャスト': 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7918): warning C4311: '型キャスト': ポインターを 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7918): warning C4302: '型キャスト': 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7931): warning C4311: '型キャスト': ポインターを 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7931): warning C4302: '型キャスト': 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7944): warning C4311: '型キャスト': ポインターを 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7944): warning C4302: '型キャスト': 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7954): warning C4311: '型キャスト': ポインターを 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7954): warning C4302: '型キャスト': 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7966): warning C4311: '型キャスト': ポインターを 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7966): warning C4302: '型キャスト': 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7978): warning C4311: '型キャスト': ポインターを 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7978): warning C4302: '型キャスト': 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7991): warning C4311: '型キャスト': ポインターを 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(7991): warning C4302: '型キャスト': 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(8004): warning C4311: '型キャスト': ポインターを 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(8004): warning C4302: '型キャスト': 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(8015): warning C4311: '型キャスト': ポインターを 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(8015): warning C4302: '型キャスト': 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(8016): warning C4311: '型キャスト': ポインターを 'PA_Rect *' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(8016): warning C4302: '型キャスト': 'PA_Rect *' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(8027): warning C4311: '型キャスト': ポインターを 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(8027): warning C4302: '型キャスト': 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(8038): warning C4311: '型キャスト': ポインターを 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(8038): warning C4302: '型キャスト': 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(8051): warning C4311: '型キャスト': ポインターを 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(8051): warning C4302: '型キャスト': 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(8074): warning C4311: '型キャスト': ポインターを 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(8074): warning C4302: '型キャスト': 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(8086): warning C4311: '型キャスト': ポインターを 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(8086): warning C4302: '型キャスト': 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(8101): warning C4311: '型キャスト': ポインターを 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(8101): warning C4302: '型キャスト': 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(8116): warning C4311: '型キャスト': ポインターを 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(8116): warning C4302: '型キャスト': 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(8127): warning C4311: '型キャスト': ポインターを 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(8127): warning C4302: '型キャスト': 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(8149): warning C4311: '型キャスト': ポインターを 'PA_Dial4D' から 'long' へ切り詰めます。
+4D Plugin API\4DPluginAPI.c(8149): warning C4302: '型キャスト': 'PA_Dial4D' から 'long' へ切り詰めます。
+     ライブラリ C:\Users\miyako\Desktop\RTF to text\v11\RTF2TEXT.4dbase\plugins\RTF2TEXT.bundle\contents\windows64\RTF2TEXT.lib とオブジェクト C:\Users\miyako\Desktop\RTF to text\v11\RTF2TEXT.4dbase\plugins\RTF2TEXT.bundle\contents\windows64\RTF2TEXT.exp を作成中
+  コード生成しています。
+  コード生成が終了しました。
+  All 217 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  RTF2TEXT.vcxproj -> C:\Users\miyako\Desktop\RTF to text\v11\RTF2TEXT.4dbase\plugins\RTF2TEXT.bundle\contents\windows64\RTF2TEXT.4DX
