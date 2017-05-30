@@ -1,7 +1,7 @@
 # 4d-plugin-RTF2TEXT
 Convert RTF to plain text
 
-Using [RTF Converter](file:///Users/miyako/Downloads/rtfc643/64-bit/rtfconv-e.html) on Windows, ``NSString`` on Mac.
+Using [RTF Converter](file:///Users/miyako/Downloads/rtfc643/64-bit/rtfconv-e.html) on Windows, ``NSAttributedString`` on Mac.
 
 ### Platform
 
