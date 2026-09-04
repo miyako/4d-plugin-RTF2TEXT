@@ -51,52 +51,65 @@ void RTF_to_text(sLONG_PTR *pResult, PackagePtr pParams)
 
 	Param1.fromParamAtIndex(pParams, 1);
 
+	try
+	{
 #if VERSIONMAC
-	NSData *data = [[NSData alloc]initWithBytes:Param1.getBytesPtr() length:Param1.getBytesLength()];
-	
-	if(data)
-	{
-		NSError *error;
-		NSDictionary *options = [[NSDictionary alloc]initWithObjects:[NSArray arrayWithObject:NSRTFTextDocumentType]
-																												 forKeys:[NSArray arrayWithObject:NSDocumentTypeDocumentOption]];
+		NSData *data = [[NSData alloc]initWithBytes:Param1.getBytesPtr() length:Param1.getBytesLength()];
 		
-		NSAttributedString *attributedString = [[NSAttributedString alloc]initWithData:data
-																																					 options:options
-																																documentAttributes:NULL
-																																						 error:&error];
-		if(attributedString)
+		if(data)
 		{
-			NSData *text = [[attributedString string]dataUsingEncoding:NSUTF8StringEncoding];
-			CUTF8String u8 = CUTF8String((const uint8_t *)[text bytes], [text length]);
-			returnValue.setUTF8String(&u8);
-			[attributedString release];
+			NSError *error;
+			NSDictionary *options = [[NSDictionary alloc]initWithObjects:[NSArray arrayWithObject:NSRTFTextDocumentType]
+																													 forKeys:[NSArray arrayWithObject:NSDocumentTypeDocumentOption]];
+			
+			NSAttributedString *attributedString = [[NSAttributedString alloc]initWithData:data
+																																						 options:options
+																																	documentAttributes:NULL
+																																							 error:&error];
+			if(attributedString)
+			{
+				NSData *text = [[attributedString string]dataUsingEncoding:NSUTF8StringEncoding];
+				CUTF8String u8 = CUTF8String((const uint8_t *)[text bytes], [text length]);
+				returnValue.setUTF8String(&u8);
+				[attributedString release];
+			}
+			
+			[options release];
+			[data release];
 		}
-		
-		[data release];
-	}
 #else
-	RTFCONVEXINFO RtfconvExInfo = { sizeof(RTFCONVEXINFO) };
-	RtfconvExInfo.dwConversionMode = CONVMODE_NO_OUTPUT_BOM;
-	
-	int ulen = RtfconvStringEx((const void *)Param1.getBytesPtr(),
-														 NULL,
-														 0,
-														 CP_UTF16,
-														 &RtfconvExInfo,
-														 0);
-	if(ulen > 0)
-	{
-		std::vector<char>buf(ulen + sizeof(PA_Unichar));
-		RtfconvStringEx((const void *)Param1.getBytesPtr(),
-										&buf[0],
-										0,
-										CP_UTF16,
-										&RtfconvExInfo,
-										ulen);
-		CUTF16String u16 = CUTF16String((const PA_Unichar *)&buf[0]);
-		returnValue.setUTF16String(&u16);
-	}
+		RTFCONVEXINFO RtfconvExInfo = { sizeof(RTFCONVEXINFO) };
+		RtfconvExInfo.dwConversionMode = CONVMODE_NO_OUTPUT_BOM;
+		
+		int ulen = RtfconvStringEx((const void *)Param1.getBytesPtr(),
+															 NULL,
+															 0,
+															 CP_UTF16,
+															 &RtfconvExInfo,
+															 0);
+		if(ulen > 0)
+		{
+			std::vector<char>buf(ulen + sizeof(PA_Unichar));
+			RtfconvStringEx((const void *)Param1.getBytesPtr(),
+											&buf[0],
+											0,
+											CP_UTF16,
+											&RtfconvExInfo,
+											ulen);
+			CUTF16String u16 = CUTF16String((const PA_Unichar *)&buf[0]);
+			returnValue.setUTF16String(&u16);
+		}
 #endif
+	}
+	catch(...)
+	{
+		// Ensure 4D always gets a return value (manifest declares "RTF to text(&O):T"),
+		// even if the conversion above throws (e.g. std::bad_alloc on a very large/
+		// malformed RTF blob). Without this, an exception here would previously
+		// propagate to PluginMain's catch(...), which swallows it without ever
+		// calling setReturn() -- leaving 4D waiting indefinitely (a freeze) instead
+		// of getting an empty text result back.
+	}
 	
 	returnValue.setReturn(pResult);
 }
