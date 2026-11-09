@@ -8,6 +8,9 @@ RTF2TEXT converts RTF (Rich Text Format) data into plain text. On Windows it dri
 
 **Platforms:** macOS, Windows
 
+Manual source-only **Bump version** and independent zero-input **Build**
+workflows are documented in [the release guide](.github/README.md).
+
 ---
 
 ## Requirements & platform notes
