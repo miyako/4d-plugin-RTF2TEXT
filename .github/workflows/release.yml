@@ -10,6 +10,8 @@
 # Canonical 4D layout is enforced:
 #   <Product>.4dbase/Plugins/<Product>.bundle/Contents/MacOS/<Product>
 #   <Product>.4dbase/Plugins/<Product>.bundle/Contents/Windows64/<Product>.4DX
+#   <Product>.4dbase/Plugins/<Product>.bundle/Contents/Windows64/*.dll  (committed
+#     runtime deps, verified by .github/scripts/verify-windows-deps.ps1)
 #   <Product>.4dbase/Plugins/<Product>.bundle/Contents/Resources/...
 
 name: Build & Release
@@ -31,6 +33,10 @@ env:
   # ---- only this needs editing per-project ----
   PRODUCT_NAME: RTF2TEXT
   MACOS_DEPLOYMENT_TARGET: '11.0'
+  # DLLs that must ship in Contents/Windows64. rtfconv.dll is imported by the
+  # 4DX; the *tbl.dll code-page tables are loaded by rtfconv at runtime and
+  # are therefore invisible to the import-table walk.
+  RUNTIME_DLLS: rtfconv.dll cnstbl.dll mbctbl.dll sbctbl.dll
   # ---------------------------------------------
 
 concurrency:
@@ -63,6 +69,20 @@ jobs:
       - name: setup MSBuild
         uses: microsoft/setup-msbuild@v2
 
+      - name: stash committed runtime DLLs
+        shell: pwsh
+        run: |
+          # The bundle's Windows64 folder holds the prebuilt x64 rtfconv DLLs.
+          # Stash them before the bundle is wiped below.
+          $product = "${{ env.PRODUCT_NAME }}"
+          $src = "$product.4dbase/Plugins/$product.bundle/Contents/Windows64"
+          New-Item -ItemType Directory -Force -Path windlls | Out-Null
+          Copy-Item "$src/*.dll" windlls/
+          foreach ($n in "${{ env.RUNTIME_DLLS }}".Split(' ', [StringSplitOptions]::RemoveEmptyEntries)) {
+            if (-not (Test-Path "windlls/$n")) { Write-Host "::error::$n not found in $src"; exit 1 }
+          }
+          Get-ChildItem windlls | Format-Table Name, Length
+
       - name: clean stale bundle outputs
         shell: pwsh
         run: |
@@ -90,8 +110,12 @@ jobs:
           New-Item -ItemType Directory -Force -Path $canonicalDir | Out-Null
 
           # msbuild may have created plugins/contents/windows64 (lower-case) due to vcxproj settings.
-          # Find the built .4DX wherever it landed, case-insensitive.
-          $found = Get-ChildItem -Recurse -Filter "$product.4DX" -ErrorAction SilentlyContinue | Where-Object { $_.FullName -like "*4dbase*" } | Select-Object -First 1
+          # Find the built .4DX wherever it landed, case-insensitive, but only
+          # under Contents\Windows64 so the legacy x86 Contents\Windows binary
+          # can never be picked.
+          $found = Get-ChildItem -Recurse -Filter "$product.4DX" -ErrorAction SilentlyContinue |
+            Where-Object { $_.FullName -like "*\$product.4dbase\Plugins\$product.bundle\Contents\Windows64\$product.4DX" } |
+            Select-Object -First 1
           if (-not $found) {
             Write-Host "Searching all..."
             Get-ChildItem -Recurse -Filter "*.4DX" | ForEach-Object { Write-Host $_.FullName }
@@ -111,12 +135,28 @@ jobs:
           }
           Get-ChildItem "$canonicalDir"
 
+      - name: bundle runtime DLLs
+        shell: pwsh
+        run: |
+          $product = "${{ env.PRODUCT_NAME }}"
+          $canonicalDir = "$product.4dbase/Plugins/$product.bundle/Contents/Windows64"
+          New-Item -ItemType Directory -Force -Path winbin | Out-Null
+          Copy-Item "$canonicalDir/$product.4DX" winbin/
+          Copy-Item windlls/*.dll winbin/
+          Get-ChildItem winbin | Format-Table Name, Length
+
+      - name: verify DLL dependencies
+        shell: pwsh
+        run: |
+          $required = "${{ env.RUNTIME_DLLS }}".Split(' ', [StringSplitOptions]::RemoveEmptyEntries)
+          ./.github/scripts/verify-windows-deps.ps1 -Dir winbin -Binary "${{ env.PRODUCT_NAME }}.4DX" -Required $required
+
       - name: upload windows binaries
         uses: actions/upload-artifact@v4
         with:
           name: windows-binaries
-          # canonical case only - portable for macOS job
-          path: ${{ env.PRODUCT_NAME }}.4dbase/Plugins/${{ env.PRODUCT_NAME }}.bundle/Contents/Windows64/${{ env.PRODUCT_NAME }}.4DX
+          # 4DX + runtime DLLs, flat - merged into Contents/Windows64 on macOS
+          path: winbin/
           if-no-files-found: error
 
   build-macos:
@@ -224,19 +264,22 @@ jobs:
           
           mkdir -p "$BUNDLE/Contents/Windows64"
           
-          # winbuild contains the single .4DX file downloaded from Windows job
           echo "winbuild contents:"
           ls -R winbuild
           
-          # Handle case where artifact preserved subfolder structure (fallback)
-          SRC=$(find winbuild -name "${PRODUCT}.4DX" -type f | head -1)
-          if [ -z "$SRC" ]; then
+          if [ ! -f "winbuild/${PRODUCT}.4DX" ]; then
             echo "::error::Windows binary ${PRODUCT}.4DX not found in winbuild/"
             exit 1
           fi
           
-          echo "Copying $SRC -> $BUNDLE/Contents/Windows64/${PRODUCT}.4DX"
-          cp "$SRC" "$BUNDLE/Contents/Windows64/${PRODUCT}.4DX"
+          # 4DX plus every runtime DLL it needs (verified on the windows job).
+          cp winbuild/"${PRODUCT}.4DX" winbuild/*.dll "$BUNDLE/Contents/Windows64/"
+          for DLL in ${{ env.RUNTIME_DLLS }}; do
+            if [ ! -f "$BUNDLE/Contents/Windows64/$DLL" ]; then
+              echo "::error::$DLL missing from $BUNDLE/Contents/Windows64"
+              exit 1
+            fi
+          done
           
           echo "BUNDLE_PATH=$BUNDLE" >> "$GITHUB_ENV"
           ls -R "$BUNDLE/Contents"
