@@ -373,5 +373,7 @@ class SourceVersionTests(Fixture):
             "RTF2TEXT.4dbase", "a", "lib", "include", "4D Plugin API", "support",
             "manifest.json", "constants.json", "constants.xlf",
             "RTF2TEXT.vcxproj", "RTF2TEXT.sln", "RTF2TEXT.zip", "RTF2TEXT.dmg",
+            # First-party ownership repair, covered by test_ownership.py.
+            ":(exclude)4D Plugin API/Classes/C_PICTURE.cpp",
         ], cwd=ROOT)
         self.assertEqual(diff, b"")
