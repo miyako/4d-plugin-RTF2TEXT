@@ -119,6 +119,21 @@ class NativePreparationTests(Fixture):
                 native.merge_windows()
             self.assertEqual(binary.read_bytes(), b"previous")
 
+    def test_final_packaged_output_validation_requires_every_nonempty_regular_leaf(self):
+        for path in native.FILES:
+            self.write(path, b"fresh output")
+        with cwd(self.root):
+            native.validate_outputs()
+            for path in native.FILES:
+                saved = path.read_bytes()
+                path.unlink()
+                with self.assertRaisesRegex(ValueError, "Missing or empty"):
+                    native.validate_outputs()
+                path.write_bytes(b"")
+                with self.assertRaisesRegex(ValueError, "Missing or empty"):
+                    native.validate_outputs()
+                path.write_bytes(saved)
+
 
 class GeneratedRetentionTests(GitFixture):
     def test_actual_xcode_database_wal_and_outputs_are_final_only(self):

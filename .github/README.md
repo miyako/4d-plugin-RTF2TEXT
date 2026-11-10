@@ -71,6 +71,8 @@ intermediate paths are allowed. XCBuildData permits only `build.db`,
 Unexpected ignored source, `build.db-evil`, and `evil.xcbuilddata` are rejected.
 Built XML/binary plist, compiled/text localization and exact copied
 `manifest.json`/`constants.xlf` are checked again at publication.
+Every packaged generated leaf, including the macOS executable and signature,
+must still be a nonempty regular nonsymlink file at that final gate.
 
 Developer ID signing, strict verification, two notary submissions, and DMG
 stapling remain required. Notarization requires both exit zero and strict

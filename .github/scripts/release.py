@@ -148,6 +148,7 @@ def context(sha, *, final=False):
     repository.verify_checkout(sha, generated=native.generated,
                                assets=asset_names(version), final=final)
     if final:
+        native.validate_outputs()
         source_version.verify_bundle(native.BUNDLE)
         native.verify_resources()
         native.verify_windows()

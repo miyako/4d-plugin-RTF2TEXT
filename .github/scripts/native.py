@@ -69,6 +69,12 @@ def require_file(path):
         raise ValueError(f"Missing or empty native output: {path}")
 
 
+def validate_outputs():
+    validate_paths((*FILES, WINDOWS_BINARY, *DOWNLOADS, *DIRECTORIES, XCODE_DATA))
+    for path in FILES:
+        require_file(path)
+
+
 def verify_resources():
     for name in ("manifest.json", "constants.xlf"):
         copied = BUNDLE / "Contents/Resources" / name

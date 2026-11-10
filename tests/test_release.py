@@ -459,6 +459,35 @@ class PublicationCLITests(GitFixture):
             self.assertEqual(self.calls(), [])
             target.write_bytes(saved)
 
+    def test_every_final_packaged_output_must_remain_regular_nonempty_before_any_api(self):
+        expected = self.build()
+        external = self.root / "late-generated-output"
+        for path in native.FILES:
+            target = self.local / path
+            saved = target.read_bytes()
+            external.write_bytes(saved)
+            for kind in ("missing", "empty", "directory", "symlink"):
+                with self.subTest(path=path, kind=kind):
+                    target.unlink()
+                    if kind == "empty":
+                        target.write_bytes(b"")
+                    elif kind == "directory":
+                        target.mkdir()
+                    elif kind == "symlink":
+                        target.symlink_to(external)
+                    result = self.command("publish")
+                    self.assertNotEqual(result.returncode, 0, result.stdout)
+                    self.assertEqual(self.calls(), [], result.stderr)
+                    if target.is_dir() and not target.is_symlink():
+                        target.rmdir()
+                    elif target.exists() or target.is_symlink():
+                        target.unlink()
+                    target.write_bytes(saved)
+        result = self.command("publish")
+        self.assertEqual(result.returncode, 0, result.stderr)
+        for path, raw in expected.items():
+            self.assertEqual((self.local / path).read_bytes(), raw)
+
     def test_final_windows_merge_and_committed_runtime_rechecked_before_api(self):
         self.build()
         for path in (native.WINDOWS_BINARY, native.DOWNLOADS[0],
