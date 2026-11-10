@@ -16,6 +16,7 @@ $dumpbin = Get-Command dumpbin -ErrorAction SilentlyContinue | ForEach-Object So
 if (-not $dumpbin) {
   $vswhere = "${env:ProgramFiles(x86)}\Microsoft Visual Studio\Installer\vswhere.exe"
   $vs = & $vswhere -latest -products * -requires Microsoft.VisualStudio.Component.VC.Tools.x86.x64 -property installationPath
+  if ($LASTEXITCODE -ne 0) { Write-Error 'vswhere failed'; exit 1 }
   $dumpbin = Get-ChildItem "$vs\VC\Tools\MSVC\*\bin\Hostx64\x64\dumpbin.exe" | Sort-Object FullName -Descending | Select-Object -First 1 -ExpandProperty FullName
 }
 if (-not $dumpbin) { Write-Error 'dumpbin.exe not found'; exit 1 }
@@ -45,9 +46,12 @@ while ($queue.Count) {
   $path = $local[$current.ToLowerInvariant()]
 
   $headers = & $dumpbin /nologo /headers $path | Out-String
+  if ($LASTEXITCODE -ne 0) { Write-Error "dumpbin /headers failed for $current"; exit 1 }
   if ($headers -notmatch 'machine \(x64\)') { Write-Host "::error::$current is not an x64 image"; exit 1 }
 
-  $imports = & $dumpbin /nologo /dependents $path |
+  $dependents = & $dumpbin /nologo /dependents $path
+  if ($LASTEXITCODE -ne 0) { Write-Error "dumpbin /dependents failed for $current"; exit 1 }
+  $imports = $dependents |
     Where-Object { $_ -match '^\s+(\S+\.dll)\s*$' } | ForEach-Object { $Matches[1] }
   foreach ($imp in $imports) {
     $key = $imp.ToLowerInvariant()
